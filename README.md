@@ -1,6 +1,8 @@
 # Meshy.ai 3D Model Ripper
 
-A tool to extract/download 3D models (GLB files) from [Meshy.ai](https://www.meshy.ai) workspace pages.
+> **⚠️ Disclaimer:** This project is intended **strictly for educational and research purposes only**. It demonstrates browser automation techniques, API interception patterns, and binary file format (GLB/glTF) handling. The authors do not encourage or condone unauthorized downloading, redistribution, or misuse of copyrighted 3D models. Always respect the terms of service of any platform you interact with. Use at your own risk.
+
+A tool that demonstrates how to extract 3D model data (GLB files) from web-based 3D viewers using browser automation and API interception techniques.
 
 ## How It Works
 
@@ -9,6 +11,14 @@ A tool to extract/download 3D models (GLB files) from [Meshy.ai](https://www.mes
 3. The injected script hooks into the browser's `Worker`, `URL.createObjectURL`, and `fetch` APIs to intercept GLB model data
 4. When a GLB file is detected, it's automatically sent to the Node.js server and saved to the `downloads/` folder
 5. The browser tab closes automatically after the model is saved
+
+## Educational Topics Covered
+
+- **Browser Automation** — Using Puppeteer to control Chromium-based browsers programmatically
+- **JavaScript API Hooking** — Intercepting native browser APIs (`Worker`, `fetch`, `URL.createObjectURL`)
+- **Binary File Formats** — Understanding the GLB/glTF 2.0 binary container format and its magic bytes (`0x46546C67`)
+- **Web Worker Communication** — Monitoring `postMessage` data between main thread and Web Workers
+- **Express.js Server** — Building a simple API server with binary data handling
 
 ## Installation
 
